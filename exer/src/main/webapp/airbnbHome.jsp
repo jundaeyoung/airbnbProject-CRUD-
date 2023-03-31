@@ -127,8 +127,7 @@ div {
 	<section class="home">
 		<div>
 			<form action="" method="GET" class="serch">
-				<a
-					href="/exer/error.jsp"><img
+				<a href="/exer/error.jsp"><img
 					alt="" src="images/home1.png" style="border-radius: 20px">
 					<p>Ganggu-myeon, Yeongdeok-gun,한국</p>
 					<p>바다 전망</p>
