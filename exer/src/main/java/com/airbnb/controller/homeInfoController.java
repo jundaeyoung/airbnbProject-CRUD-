@@ -10,49 +10,43 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import javax.websocket.Session;
 
-import com.airbnb.dao.HomeDAO;
-import com.airbnb.dto.HomeDTO;
+import com.airbnb.dao.HomeInfoDAO;
+import com.airbnb.dto.HomeInfoDTO;
+import com.airbnb.service.homeInfoService;
 import com.airbnb.utils.DBHelper;
 
-@WebServlet("/homeController")
-public class homeController extends HttpServlet {
+@WebServlet("/homeInfoController")
+public class homeInfoController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private HomeDAO dao;
+	private homeInfoService homeInfoService;
 
-	@Override
-	public void init() throws ServletException {
-		DBHelper dbHelper = new DBHelper();
-		dbHelper.getConnection();
-	}
-
-	public homeController() {
-		dao = new HomeDAO();
+	public homeInfoController() {
+		homeInfoService = new homeInfoService();
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		HomeDAO dao = new HomeDAO();
+		HomeInfoDAO dao = new HomeInfoDAO();
 		request.setCharacterEncoding("UTF-8");
-		HttpSession session = request.getSession();
 		String action = request.getParameter("action");
 		String home_id = request.getParameter("id");
-		if ("search".equals(action)) {
+		if ("delete".equals(action)) {
 
 		} else {
-			ArrayList<HomeDTO> resultlist = dao.select();
-//			request.setAttribute("home_id", home_id);
-			request.setAttribute("list", resultlist);
-			System.out.println("home_id제발제발 " + home_id);
-			RequestDispatcher dispatcher = request.getRequestDispatcher("airbnbHomeLogin.jsp");
-			dispatcher.forward(request, response);
 
+			HomeInfoDTO responseDTO = dao.select(Integer.parseInt(home_id));
+			request.setAttribute("action", action);
+			request.setAttribute("home_id", home_id);
+			RequestDispatcher dispatcher = request.getRequestDispatcher("home10.jsp");
+			dispatcher.forward(request, response);
 		}
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+
 	}
 
 }

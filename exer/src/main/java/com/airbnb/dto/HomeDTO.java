@@ -7,7 +7,8 @@ public class HomeDTO {
 	String day;
 	String view;
 	
-	
+	public HomeDTO() {
+	}
 	
 	public String getName() {
 		return name;
