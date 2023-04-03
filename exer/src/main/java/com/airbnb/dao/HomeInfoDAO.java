@@ -71,8 +71,43 @@ public class HomeInfoDAO implements IHomeInfoDAO {
 	}
 
 	@Override
-	public int insert() {
-		return 0;
+	public int insert(String title, String location, String image1, String image2, String image3, String image4,
+			String image5, String host, String info, String sideimage1, String sideInfo1, String sideInfo1_1,
+			String sideimage2, String sideInfo2, String sideInfo2_1, String sideimage3, String sideInfo3,
+			String sideInfo3_1, int home_id) {
+		int resultRow = 0;
+		String sql =" insert into homeinfo "
+				+ " values "
+				+ "	(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?) ";
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, title);
+			pstmt.setString(2, location);
+			pstmt.setString(3, image1);
+			pstmt.setString(4, image2);
+			pstmt.setString(5, image3);
+			pstmt.setString(6, image4);
+			pstmt.setString(7, image5);
+			pstmt.setString(8, host);
+			pstmt.setString(9, info);
+			pstmt.setString(10, sideimage1);
+			pstmt.setString(11, sideInfo1);
+			pstmt.setString(12, sideInfo1_1);
+			pstmt.setString(13, sideimage2);
+			pstmt.setString(14, sideInfo2);
+			pstmt.setString(15, sideInfo2_1);
+			pstmt.setString(16, sideimage3);
+			pstmt.setString(17, sideInfo3);
+			pstmt.setString(18, sideInfo3_1);
+			pstmt.setInt(19, home_id);
+			resultRow = pstmt.executeUpdate();
+
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}
+		return resultRow;
 	}
 
 }

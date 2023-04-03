@@ -1,20 +1,19 @@
 package com.airbnb.service;
 
-import java.util.ArrayList;
-
 import com.airbnb.dao.HomeInfoDAO;
 import com.airbnb.dto.HomeInfoDTO;
 
-public class homeInfoService {
+public class HomeInfoService {
 
 	private HomeInfoDAO homeInfoDAO;
-	public homeInfoService() {
+
+	public HomeInfoService() {
 		homeInfoDAO = new HomeInfoDAO();
 	}
+
 	public HomeInfoDTO homeInfoSelect(int home_id) {
 		HomeInfoDTO resultDTO = homeInfoDAO.select(home_id);
 		return resultDTO;
-		
 	}
-	
+
 }

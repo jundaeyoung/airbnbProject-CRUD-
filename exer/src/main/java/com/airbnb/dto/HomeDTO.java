@@ -52,6 +52,12 @@ public class HomeDTO {
 	public String toString() {
 		return "HomeDTO [id=" + id + ", price=" + price + ", name=" + name + ", day=" + day + ", view=" + view + "]";
 	}
+
+	public HomeDTO(int id) {
+		super();
+		this.id = id;
+	}
+	
 	
 	
 	
