@@ -40,3 +40,4 @@ Connection less 개념과 State less 개념 이해
 - INSERT 쿼리문을 던져 회원가입 구현 SELECT를 사용해 중복 아이디가 있는지 확인
 - UPDATE 쿼리문을 던져 정보수정 구현 SELECT를 사용해 수정시 사용이 편하도록 구현
 #### 최종영상 - <a href="https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%B5%9C%EC%A2%85%EC%98%81%EC%83%81" >
+상세보기 - WIKI 이동</a> 
