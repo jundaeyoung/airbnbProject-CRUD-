@@ -18,23 +18,20 @@ Connection less 개념과 State less 개념 이해
 - **IDE** : Eclipse 4.26
 
 ## 📌 주요 기능
-#### main frame - <a href="https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C-(-%EB%A9%94%EC%9D%B8-%ED%99%94%EB%A9%B4-%EC%84%A4%EA%B3%84-)" >상세보기 - WIKI 이동</a>
+#### main - <a href="https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C-(-%EB%A9%94%EC%9D%B8-%ED%99%94%EB%A9%B4-%EC%84%A4%EA%B3%84-)" >상세보기 - WIKI 이동</a>
 - 실제 airbnb와 비슷하게 제작
 - forEach를 사용하여 DB에 숙소 정보만 넣으면 바로 화면에 나타날수 있도록 설계
 - 숙소 정보창도 여러 개가 아닌 하나의 jsp 파일로 구현
-#### player - <a href="https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(player)" >상세보기 - WIKI 이동</a>
-- 움직이는 기능
-- 먹는 기능
-#### enemy - <a href="https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(enemy)" >상세보기 - WIKI 이동</a>
-- 랜덤으로 움직이는 기능
-- fast mode 생성
-#### item | Life - <a href="https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(item-%7C-Life)" >상세보기 - WIKI 이동</a>
-- stopwatch 아이템
-- enemy와 충돌 시마다 생명 1개씩 소멸
-#### BGM - <a href="https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(BGM)" >상세보기 - WIKI 이동</a>
-- game 배경음악
-#### score | seed - <a href="https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(score-%7C-seed)" >상세보기 - WIKI 이동</a> 
-- map을 따라 씨앗 전체 배열
-- 점수 획득 기능
-#### 시작 종료 frame - <a href="https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(Start-%7C-Finish-frame)" >상세보기 - WIKI 이동</a>
-- 시작 종료 화면 구성
+#### reply - <a href="[https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(player)](https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C-(-%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5-))" >상세보기 - WIKI 이동</a>
+- 후기를 적으면 평점이 올라가고 후기 갯수가 올라갈 수 있도록 구현
+- 후기 평점을 평균 내서 평점을 내도록 구현
+- 해당 아이디로 작성한 글은 해당 아이디로만 삭제 가능( 다른 사람이 적은 후기를 내가 삭제 못하도록 구현한 것 )
+#### reservation - <a href="[https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(enemy)](https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C-(-%EC%98%88%EC%95%BD-%EA%B8%B0%EB%8A%A5-))" >상세보기 - WIKI 이동</a>
+- 예약하면 예약 정보가 db에 넘어가도록 구현
+#### search - <a href="[https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(item-%7C-Life)](https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C-(%EC%88%99%EC%86%8C-%EA%B2%80%EC%83%89-%EA%B8%B0%EB%8A%A5))" >상세보기 - WIKI 이동</a>
+- 숙소 정보를 DB에 담아 SELECT 쿼리문을 던져 숙소 검색
+- 쿼리문을 던질 때 like절 사용 방법 주의
+#### User - <a href="[https://github.com/SeongheePark/PacmanProject/wiki/%EC%A3%BC%EC%9A%94-%EA%B8%B0%EB%8A%A5-%EC%86%8C%EA%B0%9C(score-%7C-seed)](https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C(%EC%82%AC%EC%9A%A9%EC%9E%90-%EB%A1%9C%EA%B7%B8%EC%9D%B8,%EB%A1%9C%EA%B7%B8%EC%95%84%EC%9B%83,%ED%9A%8C%EC%9B%90%EA%B0%80%EC%9E%85,%EC%A0%95%EB%B3%B4%EC%88%98%EC%A0%95))" >상세보기 - WIKI 이동</a> 
+- SELECT 쿼리문을 던져 로그인 구현
+- INSERT 쿼리문을 던져 회원가입 구현 SELECT를 사용해 중복 아이디가 있는지 확인
+- UPDATE 쿼리문을 던져 정보수정 구현 SELECT를 사용해 수정시 사용이 편하도록 구현
