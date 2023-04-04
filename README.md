@@ -22,7 +22,7 @@ Connection less 개념과 State less 개념 이해
 - 실제 airbnb와 비슷하게 제작
 - forEach를 사용하여 DB에 숙소 정보만 넣으면 바로 화면에 나타날수 있도록 설계
 - 숙소 정보창도 여러 개가 아닌 하나의 jsp 파일로 구현
-#### reply - <a href="https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C-(-%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5-))" >상세보기 - WIKI 이동</a>
+#### reply - <a href="https://github.com/jundaeyoung/airbnbProject-CRUD-/wiki/%EC%A3%BC%EC%9A%94%EA%B8%B0%EB%8A%A5%EC%86%8C%EA%B0%9C-(-%EB%8C%93%EA%B8%80-%EA%B8%B0%EB%8A%A5-)" >상세보기 - WIKI 이동</a>
 - 후기를 적으면 평점이 올라가고 후기 갯수가 올라갈 수 있도록 구현
 - 후기 평점을 평균 내서 평점을 내도록 구현
 - 해당 아이디로 작성한 글은 해당 아이디로만 삭제 가능( 다른 사람이 적은 후기를 내가 삭제 못하도록 구현한 것 )
