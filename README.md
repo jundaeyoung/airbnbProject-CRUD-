@@ -1,8 +1,12 @@
 # Java Project_airbnb 목표
 HTTP 메세지 (시작 줄, 헤드, 헤더, 빈 줄(CLRF), 바디) 개념 꼭 이해하기  
+
 웹 서버와 (WAS)웹 컨테이너 개념 이해하기 
+
 Servlet 과 JSP 파일에 대한 이해 
+
 Connection less 개념과 State less 개념 이해 
+
 요청부터 응답까지 순서 그림 그려보기 
 
 
