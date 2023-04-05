@@ -104,6 +104,10 @@ td {
 	z-index: 0;
 	padding: 0;
 }
+
+.add:hover {
+	cursor: pointer;
+}
 </style>
 </head>
 <body>
@@ -171,9 +175,8 @@ td {
 				value="<%=home_id%>">
 			<button type="submit" class=add>추가하기</button>
 		</form>
-		<button class=add>
-			<a href="/exer/homeController?action=select&cid=5">home </a>
-		</button>
+		<button class=add
+			onclick="location.href='/exer/homeController?action=select&cid=5'">home</button>
 	</div>
 </body>
 </html>
