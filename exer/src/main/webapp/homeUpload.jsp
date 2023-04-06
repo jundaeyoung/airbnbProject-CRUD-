@@ -56,7 +56,7 @@ button {
 		</div>
 	</section>
 	<section class=content>
-		<form action="/exer/homeUploadController" method="POST">
+		<form action="/exer/homeUploadController" method="POST" enctype="multipart/form-data">
 			<div class="form-group">
 				<label>가격</label> <input type="text" placeholder="296,800 / 박"
 					name="price" id="price" class="form-control" required>
@@ -73,6 +73,10 @@ button {
 			<div class="form-group">
 				<label>view</label> <input type="text" placeholder="바다 전망"
 					name="view" id="view" class="form-control" required>
+			</div>
+			<div class="form-group">
+				<label>image</label> <input type="file" placeholder="바다 전망"
+					name="image" id="image" class="form-control" required>
 			</div>
 
 			<button type="submit" class="btn btn-primary">등록</button>

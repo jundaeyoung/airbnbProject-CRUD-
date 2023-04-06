@@ -10,7 +10,7 @@ public interface IHomeDAO {
 	
 	ArrayList<HomeDTO> search(String search);
 	
-	int insert(String price, String name, String day, String view);
+	int insert(String price, String name, String day, String view, String image);
 	
-	HomeDTO select(String price, String name, String day, String view);
+	HomeDTO select(String price, String name, String day, String view, String image);
 }

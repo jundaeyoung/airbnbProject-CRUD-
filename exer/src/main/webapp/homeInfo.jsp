@@ -14,14 +14,14 @@ String home_id = (String) request.getAttribute("home_id");
 ReplyService comentService = new ReplyService();
 HomeInfoService homeInfoService = new HomeInfoService();
 
-HomeInfoDTO homeInfo = homeInfoService.homeInfoSelect(Integer.parseInt(home_id)); 
+HomeInfoDTO homeInfo = homeInfoService.homeInfoSelect(Integer.parseInt(home_id));
 
 ReplyDTO replyDTO = comentService.comentCount(Integer.parseInt(home_id));
 ReplyDTO replyDTO1 = comentService.ratingCount(Integer.parseInt(home_id));
 int comentCount = replyDTO.getComent();
 String rating = replyDTO1.getRating();
-if(rating==null){
-	rating="0.00";
+if (rating == null) {
+	rating = "0.00";
 }
 HomeInfoDTO homeInfoDTO = homeInfoService.homeInfoSelect(Integer.parseInt(home_id));
 String title = homeInfoDTO.getTitle();
@@ -247,9 +247,8 @@ table {
 <body>
 	<section class="header">
 		<div class="icon">
-			<a
-				href="/exer/homeController?action=select&cid=5"><img
-				alt="" src="images/airbnb.jpg"></a>
+			<a href="/exer/homeController?action=select&cid=5"><img alt=""
+				src="images/airbnb.jpg"></a>
 		</div>
 		<div class="air"></div>
 		<div>
@@ -265,7 +264,8 @@ table {
 		</div>
 		<div>당신의 공간을 에어비엔비하세요</div>
 		<div>
-			<a href="/exer/UserInfoController"><img alt="" src="images/Login.png"></a>
+			<a href="/exer/UserInfoController"><img alt=""
+				src="images/Login.png"></a>
 		</div>
 	</section>
 	<hr>
@@ -294,13 +294,15 @@ table {
 			<div class=home>
 				<div class=homeImgDiv>
 					<section>
-						<img alt="" src="<%=image1%>">
+						<img alt="" src="<%=image1%>" width=485 height=445>
 					</section>
 					<section>
-						<img alt="" src="<%=image2%>"> <img alt="" src="<%=image3%>">
+						<img alt="" src="<%=image2%>" width=220 height=220> <img
+							alt="" src="<%=image3%>" width=220 height=220>
 					</section>
 					<section>
-						<img alt="" src="<%=image4%>"> <img alt="" src="<%=image5%>">
+						<img alt="" src="<%=image4%>" width=220 height=220> <img
+							alt="" src="<%=image5%>" width=220 height=220>
 					</section>
 				</div>
 				<div id=explanation>
@@ -311,21 +313,24 @@ table {
 
 						<div class=info>
 							<div>
-								<img alt="" src="images/<%=sideimage1%>">
+								<img alt="" src="images/home<%=home_id%>/<%=sideimage1%>"
+									width=45 height=45>
 								<div>
 									<%=sideInfo1%>
 									<h6><%=sideInfo1_1%></h6>
 								</div>
 							</div>
 							<div>
-								<img alt="" src="images/<%=sideimage2%>">
+								<img alt="" src="images/home<%=home_id%>/<%=sideimage2%>"
+									width=45 height=45>
 								<div>
 									<%=sideInfo2%>
 									<h6><%=sideInfo2_1%></h6>
 								</div>
 							</div>
 							<div>
-								<img alt="" src="images/<%=sideimage3%>">
+								<img alt="" src="images/home<%=home_id%>/<%=sideimage3%>"
+									width=45 height=45>
 								<div>
 									<%=sideInfo3%>
 									<h6><%=sideInfo3_1%></h6>

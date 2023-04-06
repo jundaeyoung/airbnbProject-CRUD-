@@ -38,7 +38,8 @@ public class HomeDAO implements IHomeDAO {
 				String name = rs.getString("name");
 				String day = rs.getString("day");
 				String view = rs.getString("view");
-				HomeDTO dto = new HomeDTO(id, price, name, day, view);
+				String image = rs.getString("image");
+				HomeDTO dto = new HomeDTO(id, price, name, day, view, image);
 				list.add(dto);
 			}
 		} catch (SQLException e) {
@@ -71,7 +72,8 @@ public class HomeDAO implements IHomeDAO {
 				String name = rs.getString("name");
 				String day = rs.getString("day");
 				String view = rs.getString("view");
-				HomeDTO dto = new HomeDTO(id, price, name, day, view);
+				String image = rs.getString("image");
+				HomeDTO dto = new HomeDTO(id, price, name, day, view, image);
 				System.out.println(list);
 				list.add(dto);
 			}
@@ -88,27 +90,22 @@ public class HomeDAO implements IHomeDAO {
 	}
 
 	@Override
-	public int insert(String price, String name, String day, String view) {
+	public int insert(String price, String name, String day, String view, String image) {
 		int resultRow = 0;
 		int homeUpdateId = 0;
 		PreparedStatement pstmt = null;
-		String sql = " INSERT INTO home(price,name,day,view) " + " VALUES " + "	(?,?,?,?) ";
+		String sql = " INSERT INTO home(price,name,day,view,image) " + " VALUES " + "	(?,?,?,?,?) ";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, price);
 			pstmt.setString(2, name);
 			pstmt.setString(3, day);
 			pstmt.setString(4, view);
+			pstmt.setString(5, image);
 			resultRow = pstmt.executeUpdate();
-			HomeDTO resultDTO = select(price, name, day, view);
-			System.out.println(price);
-			System.out.println(name);
-			System.out.println(day);
-			System.out.println(view);
-			System.out.println(resultDTO.getId());
-			homeUpdateId=resultDTO.getId();
-			
-			
+			HomeDTO resultDTO = select(price, name, day, view, image);
+			homeUpdateId = resultDTO.getId();
+
 		} catch (SQLException e) {
 			System.out.println("여기서 오류");
 			e.printStackTrace();
@@ -123,9 +120,9 @@ public class HomeDAO implements IHomeDAO {
 	}
 
 	@Override
-	public HomeDTO select(String price, String name, String day, String view) {
+	public HomeDTO select(String price, String name, String day, String view, String image) {
 
-		String strQry = " SELECT id FROM home " + " WHERE price= ? AND name= ? AND day= ? AND view= ? ";
+		String strQry = " SELECT id FROM home " + " WHERE price= ? AND name= ? AND day= ? AND view= ? AND image=? ";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		HomeDTO homeDTO = null;
@@ -136,8 +133,8 @@ public class HomeDAO implements IHomeDAO {
 			pstmt.setString(2, name);
 			pstmt.setString(3, day);
 			pstmt.setString(4, view);
+			pstmt.setString(5, image);
 			rs = pstmt.executeQuery();
-
 			while (rs.next()) {
 				homeDTO.setId(rs.getInt("id"));
 			}

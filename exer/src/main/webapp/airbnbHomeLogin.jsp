@@ -1,3 +1,6 @@
+<%@page import="com.airbnb.dto.HomeDTO"%>
+<%@page import="com.airbnb.dao.HomeDAO"%>
+<%@page import="com.airbnb.service.HomeUploadService"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page errorPage="errorPage.jsp"%>
@@ -5,6 +8,7 @@
 <%
 String id = (String) session.getAttribute("id");
 String home_id = (String) session.getAttribute("home_id");
+HomeDAO dao = new HomeDAO();
 %>
 <!DOCTYPE html>
 <html>
@@ -175,8 +179,8 @@ div {
 				<form action="/exer/homeInfoController" name="home_id" method="GET"
 					class="serch " id="homeinfo">
 					<button type="submit" name="id" value="${home.id}" id="id">
-						<img alt="" src="images/home${home.id}.png"
-							style="border-radius: 20px">
+						<img alt="" src="${home.image}"
+							style="border-radius: 20px" width=430 height=430>
 					</button>
 					<p>${home.name}</p>
 					<p>${home.view}</p>
